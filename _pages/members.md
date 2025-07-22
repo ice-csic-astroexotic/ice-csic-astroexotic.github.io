@@ -1,5 +1,5 @@
 ---
-title: "Group Members"
+title: "Members"
 permalink: /members/
 layout: single
 ---

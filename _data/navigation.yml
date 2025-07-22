@@ -4,11 +4,11 @@ main:
     url: /
   - title: "Research"
     url: /research/
-  - title: "Group Members"
+  - title: "Members"
     url: /members/
   - title: "Publications"
     url: /publications/
-  - title: "Scientific News"
+  - title: "News"
     url: /news/
   - title: "Outreach"
     url: /outreach/

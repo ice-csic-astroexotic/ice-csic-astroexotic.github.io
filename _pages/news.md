@@ -1,5 +1,5 @@
 ---
-title: "Scientific News"
+title: "News"
 permalink: /news/
 layout: single
 ---
