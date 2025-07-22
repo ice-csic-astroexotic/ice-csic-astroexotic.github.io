@@ -1,5 +1,5 @@
 ---
 layout: home
-# classes: wide
+classes: wide
 author_profile: true
 ---
