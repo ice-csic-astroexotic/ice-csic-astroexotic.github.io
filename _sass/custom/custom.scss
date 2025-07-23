@@ -1,0 +1,7 @@
+/* Add dot separator between nav items */
+
+.greedy-nav__item:not(:last-child)::after {
+  content: " •";
+  padding: 0 0.5rem;
+  color: #aaa;  // optional, for a lighter look
+}
