@@ -8,11 +8,11 @@ header:
   overlay_filter: 0.3      # darkens the image (0 to 1); optional
 ---
 
-### Scientific articles
+# Scientific articles
 
 Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}.
 
-### Book and book chapters
+# Book and book chapters
 
 **The Physics and Astrophysics of Neutron Stars**  
 Editors: Luciano Rezzolla, Pierre Pizzochero, D. Ian Jones, Nanda Rea, Isaac Vidaña, SPRINGER 2019.  
