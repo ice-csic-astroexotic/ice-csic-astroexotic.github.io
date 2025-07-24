@@ -2,7 +2,7 @@
 title: "Publications"
 permalink: /publications/
 layout: single
-class: wide
+# class: wide
 header:
   overlay_image: /assets/images/header_publications_helix_nebula.jpg  # adjust the path
   overlay_filter: 0.3      # darkens the image (0 to 1); optional
