@@ -8,13 +8,15 @@ header:
   overlay_filter: 0.3      # darkens the image (0 to 1); optional
 ---
 
-<div style="display: flex; flex-direction: row; align-items: flex-start; gap: 2rem;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
 
-<div style="flex: 2;">
+<!-- Left column (text) -->
+<div style="flex: 1 1 60%; min-width: 300px;">
 
 ### Scientific articles
 
-Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}.
+Our refereed publications are available on NASA/ADS  
+[here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}.
 
 ### Book and book chapters
 
@@ -28,9 +30,10 @@ Astrophysics and Space Science Proceedings. ISSN: 1570-6591.
 
 </div>
 
-<div style="flex: 1;">
-  <img src="/assets/images/book1_publications.png" style="width: 100%; margin-bottom: 1rem;">
-  <img src="/assets/images/book2_publications.png" style="width: 100%;">
+<!-- Right column (images) -->
+<div style="flex: 1 1 30%; min-width: 250px;">
+  <img src="/assets/images/book1_publications.png" alt="Image 1" style="width: 100%; margin-bottom: 1rem; border-radius: 8px;">
+  <img src="/assets/images/book2_publications.jpg" alt="Image 2" style="width: 100%; border-radius: 8px;">
 </div>
 
 </div>
