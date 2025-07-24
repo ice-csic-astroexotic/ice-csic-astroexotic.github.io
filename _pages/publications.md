@@ -10,12 +10,12 @@ header:
 
 # Scientific articles
 
-Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}. ![right-aligned-image](assets/images/book1_publications.png){: .align-right}  
+Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}. ![right-aligned-image]("assets/images/book1_publications.png"){: .align-right}  
 
 # Book and book chapters
 
 **The Physics and Astrophysics of Neutron Stars**  
-Editors: Luciano Rezzolla, Pierre Pizzochero, D. Ian Jones, Nanda Rea, Isaac Vidaña, SPRINGER 2019. ![right-aligned-image](assets/images/book2_publications.jpg){: .align-right}  
+Editors: Luciano Rezzolla, Pierre Pizzochero, D. Ian Jones, Nanda Rea, Isaac Vidaña, SPRINGER 2019. ![right-aligned-image]("assets/images/book2_publications.jpg"){: .align-right}  
 Astrophysics and Space Science Library 457. ISBN 978-3-319-97616-7.
 
 **The High-Energy Emission from Pulsars and their Systems**  
