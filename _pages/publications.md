@@ -34,9 +34,16 @@ header:
   </div>
 
   <!-- Right Column: Images -->
-  <div style="flex: 1; min-width: 300px; text-align: center;">
-    <img src="/assets/images/book1_publications.png" alt="Book 1" style="max-width: 100%; margin-bottom: 1rem; border-radius: 8px;">
-    <img src="/assets/images/book2_publications.jpg" alt="Book 2" style="max-width: 100%; border-radius: 8px;">
+  <div style="flex: 1; min-width: 300px; 
+              display: flex; 
+              flex-direction: column; 
+              justify-content: center;  /* vertical centering */
+              align-items: center;      /* horizontal centering */
+              gap: 1.5rem;">            <!-- spacing between images -->
+
+  <img src="/assets/images/book1_publications.png" alt="Book 1" style="max-width: 80%; border-radius: 8px;">
+  <img src="/assets/images/book2_publications.jpg" alt="Book 2" style="max-width: 80%; border-radius: 8px;">
+
   </div>
 
 </div>
