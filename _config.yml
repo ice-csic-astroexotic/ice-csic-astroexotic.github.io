@@ -333,3 +333,5 @@ defaults:
     values:
       layout: single
       
+# My changes
+favicon: /assets/images/favicon.ico
