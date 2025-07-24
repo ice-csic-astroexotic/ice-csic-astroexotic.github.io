@@ -10,7 +10,7 @@ header:
 
 # Scientific articles
 
-Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA).
+Our refereed publications are available on NASA/ADS [here](https://ui.adsabs.harvard.edu/user/libraries/j4lCTR_aR9-8f5SZyxVwqA){:target="_blank"}.
 
 # Book and book chapters
 
