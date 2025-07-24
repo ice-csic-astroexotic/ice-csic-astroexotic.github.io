@@ -9,6 +9,7 @@ search: false
 @import "minimal-mistakes"; // main partials
 // @import "custom/custom"; // custom styles
 
+// Custom properties for the page content
 .page__content {
-  font-size: 20px !important;
+  font-size: 16px !important;
 }
