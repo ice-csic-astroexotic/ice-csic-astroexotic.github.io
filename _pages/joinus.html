@@ -22,49 +22,71 @@ header:
   margin-top: 2rem;
 ">
 
-  <!-- Sidebar / TOC -->
-  <nav id="responsive-sidebar" style="
-    flex: 1 1 220px;
-    max-width: 220px;
-    padding: 1rem;
+<style>
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+  }
+
+  .main-content {
+    flex: 1;
+    padding-right: 2rem;
+    min-width: 0;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding-left: 1rem;
     border-left: 2px solid #ccc;
-    background-color: transparent;
     font-size: 0.9rem;
     position: sticky;
     top: 100px;
-    box-sizing: border-box;
-    margin-left: auto;
-  ">
-    <h3 style="margin-top: 0;">On this page</h3>
-    <ul style="list-style: none; padding-left: 0;">
-      <li style="margin-bottom: 0.5rem;"><a href="#bachelorsmasters-theses">Bachelor's / Master's Theses</a></li>
-      <li style="margin-bottom: 0.5rem;"><a href="#internships">Internships</a></li>
-      <li style="margin-bottom: 0.5rem;"><a href="#phd-projects">Ph.D Projects</a></li>
-      <li style="margin-bottom: 0.5rem;"><a href="#postdoc-positions">PostDoc Positions</a></li>
-    </ul>
-  </nav>
+  }
 
+  @media only screen and (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .main-content {
+      padding-right: 0;
+    }
+  }
+</style>
+
+<div class="flex-container">
   <!-- Main content -->
-  <div style="
-    flex: 1 1 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  ">
-    <p>
-      Interested in working with us? Here, you will find all the available positions and the projects proposed by us.
-    </p>
+  <div class="main-content">
+    <p>Interested in working with us? Here, you will find all the available positions and the projects proposed by us.</p>
 
-    <h1 id="bachelorsmasters-theses">Bachelor's / Master's Theses</h1>
+    <h2 id="bachelorsmasters-theses">Bachelor's / Master's Theses</h2>
     <p>Coming soon.</p>
 
-    <h1 id="internships">Internships</h1>
+    <h2 id="internships">Internships</h2>
     <p>Coming soon.</p>
 
-    <h1 id="phd-projects">Ph.D Projects</h1>
+    <h2 id="phd-projects">Ph.D Projects</h2>
     <p>Coming soon.</p>
 
-    <h1 id="postdoc-positions">PostDoc Positions</h1>
+    <h2 id="postdoc-positions">PostDoc Positions</h2>
     <p>Coming soon.</p>
   </div>
 
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h3>On this page</h3>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><a href="#bachelorsmasters-theses">Bachelor's / Master's Theses</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#phd-projects">Ph.D Projects</a></li>
+      <li><a href="#postdoc-positions">PostDoc Positions</a></li>
+    </ul>
+  </nav>
 </div>
