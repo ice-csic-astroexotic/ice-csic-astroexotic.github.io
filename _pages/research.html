@@ -8,13 +8,214 @@ header:
 <!-- classes: wide -->
 ---
 
-<p>This is just a test of a very long paragraph, just to see how long the text area is. So, 
- this is a very long paragraph that will be used to test the layout of the research page. It should 
- be long enough to ensure that it wraps correctly and does not overflow the container. The goal is to
- make sure that the text is readable and that the layout remains consistent across different screen 
- sizes and devices. This paragraph will continue for a while, just to fill up space and provide a 
- good test case for the design. We want to ensure that everything looks good, so we will keep 
- writing until we reach a satisfactory length. This is important for maintaining a professional 
- appearance on the website, especially in the research section where clarity and readability are 
- crucial. So, let's keep going with this long paragraph until we feel confident that it has served 
- its purpose.</p>
+ <style>
+  @media only screen and (max-width: 768px) {
+    #responsive-sidebar {
+      display: none;
+    }
+  }
+</style>
+
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+">
+
+<style>
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+  }
+
+  .main-content {
+    flex: 1;
+    padding-right: 2rem;
+    min-width: 0;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    position: sticky;
+    top: 100px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .main-content {
+      padding-right: 0;
+    }
+  }
+</style>
+
+<div class="flex-container">
+  <!-- Main content -->
+  <div class="main-content" style="text-align: justify;">
+    <p>EXOTIC's research focuses on the neutron star population, its diversity and connection with 
+    the Universe's most transient events. Below we describe four research lines that we are 
+    currently actively investigating.</p>
+
+    <h1 id="multiw">Multi-Wavelength Observations of Compact Objects</h1>
+    <p>Our activities focus mainly on the study of the multi-band emission of <b>magnetars</b>, the
+    strongest magnetised neutron stars.</p>
+    
+    <p>Using approved programs for both <b>ground-based telescopes</b> (e.g. Parkes, GBT, ATCA) and
+    <b>orbiting high-energy satellites</b> (e.g. NICER, Swift, XMM-Newton, NuSTAR, Chandra),
+    observations of magnetars are performed as soon as they <b>experience so-called X-ray
+    outbursts</b>. These episodes manifest as order of magnitude increases in the flux of the
+    persistent X-ray emission and are typically pinpointed following the detection of short
+    X-ray bursts - a hallmark of these peculiar sources - from all-sky monitors. <b>These
+    outbursts provide a unique test bed to investigate the emission physics</b> of these
+    sources. Observational studies focus in particular on their temporal and spectral
+    properties and their evolution as they recover the quiescent state. Such studies make it
+    possible to <b>map the thermal emission on the stellar surface</b>, understand the contribution
+    of magnetospheric processes to the observed emission, establish the physical conditions
+    that allow the pulsed and bursting radio emission to be triggered, and ultimately
+    </b>estimate key source properties such as the characteristic age, the dipole magnetic field
+    at the surface, and the rotational energy loss rate</b>.</p>
+
+    <p>An additional ongoing project involves the development of <b>algorithms and pipelines to
+    search for transient events and periodic or aperiodic sources</b> in the data of several
+    publicly available multi-band catalogues. The ultimate goal of this project is to
+    increase the number of known magnetars through the discovery of outburst activities that
+    possibly passed unnoticed in the past and/or the onset of pulsed emission (typically at
+    periods of the order of a second or longer). In recent years, a few research teams have
+    begun to apply such algorithms to data of a small number of X-ray satellites. Our work
+    aims to <b>systematically extend these searches to high-energy data collected by other
+    satellites</b> (including gamma-ray satellites) as well as <b>data at other wavelengths</b>. 
+    State-of-the-art pipelines will be adapted so as to cope with the different formats of the
+    data produced by the different telescopes. The potential for new discoveries is
+    extremely promising.</p>
+
+    <div style="text-align: center;">
+        <img src="/assets/images/rcw103.jpeg" alt="Supernova remnant with magnetar" style="width:90%;">
+        <p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px;"><em>The peculiar slowly rotating magnetar at the center of the supernova remnant RCW 103. 
+        Credit: X-ray: NASA/CXC/University of Amsterdam/N.Rea et al; Optical: DSS</em></p>
+    </div>
+
+    <h1 id="magnetotherm">Magneto-thermal Evolution of Neutron Stars</h1>
+    <p>In the last few years, <b>2D studies in axial symmetry</b> have been carried out to explore in
+    detail the <b>cooling of strongly magnetized neutron stars and the interplay between the
+    thermal and magnetic evolution</b> (Pons, Miralles & Geppert 2009; Viganò, Rea, Pons et al.
+    2013). <b>First 3D attempts have been recently published</b>, but these approaches were limited
+    to the magnetic evolution, without taking into account thermal coupling (which increase
+    substantially the computational challenge, adding the coupling of a second differential
+    equation), and valid only for magnetic fields &gt; 10<sup>14</sup> G (Gourgouliatos & Cumming 2014,
+    Gougouliatos et al. 2016; Bansgrove, Levin & Beloborodov 2018, Igoshev et al. 2020, De
+    Grandis et al. 2020). In this respect, we want to build a complete 3D magneto-thermal
+    evolution model (with the crucial help of long standing collaborators working in
+    numerical simulations: see e.g. Viganò et al. 2013).</p>
+
+    <p>We will close this gap by <b>building a 3D magneto-thermal evolution model</b> (with the help 
+    of our long-standing collaborators; Viganò et al. 2021). This is crucial since (i)
+    magnetic field evolution is <b>an important ingredient for pulsar population synthesis</b> as
+    magnetic field changes affect the stars' rotational properties, which are the key
+    ingredient to extract pulsar properties at birth from observations, (ii) the <b>burst
+    activity of magnetars is driven by magnetic field evolution</b> and the release of
+    accumulated crustal stresses (Pons & Rea 2012; Beloborodov & Levin 2014; Li et al. 
+    2016); modelling the magneto-thermal evolution is thus needed to predict flaring rates. 
+    For realistic predictions, 3D models are necessary to properly model current flows over 
+    the entire neutron star surface and <b>incorporate realistic, non-axisymmetric field 
+    geometries</b>. This new code will allow us to predict magnetar flaring rate as a function 
+    of age and magnetic strength/geometry at birth, and <b>determine cooling curves to be 
+    constrained observationally</b>.</p>
+
+    <h1 id="popsynth">Population Synthesis of Galactic Neutron Stars</h1>
+    <p>The <b>neutron star population is dominated by radio pulsars</b>. However in the last decades, <b>several 
+    extreme and puzzling subclasses of neutron stars</b> have been discovered: Anomalous X-ray Pulsars 
+    (AXPs), Soft Gamma Repeaters (SGRs), Rotating Radio Transients (RRAT), X-ray Dim Isolated Neutron 
+    stars (XINSs), Central Compact Objects (CCOs) as well as the more common X-ray binary neutron stars 
+    accreting material from a low-mass or high-mass companion star. In particular, despite being 
+    governed by a single equation of state, the <b>neutron star zoo manifests itself as a multifaceted 
+    population</b>: some neutron stars are observed to emit only in radio, others seem to emit only high-
+    energy radiation in the form of X-rays and gamma rays. Some show continuous activity, while others 
+    are capable of emitting sudden powerful transients. This <b>puzzling variety of observational 
+    properties is still largely unexplained</b>. Additionally, we know that neutron stars are the compact 
+    remnants of massive stars that end their lives in Core Collapse Supernovae. To accommodate limits 
+    of the death rate of such massive stars in our Galaxy (around 1-3 per century), <b>different neutron 
+    star classes are likely related and can be linked through evolution</b>. Despite observations being 
+    plentiful, we are far from understanding connections between these different classes and a unified 
+    scenario.</p>
+
+    <p>Therefore, <b>one of the main objectives of population synthesis studies is to reconstruct, from a 
+    statistical point of view, the unknown distributions of physical properties</b> that characterise the 
+    initial population. The general approach is to use the present-day observed properties of pulsars, 
+    together with some assumptions and theoretical models about their time evolution, to reconstruct 
+    the birth distribution of physical properties such as their natal kick velocities, spin periods and 
+    magnetic field strengths. In our population-synthesis framework <b>different neutron star populations 
+    can be simulated starting from various initial conditions</b> in terms of birth positions, velocities, 
+    spin periods and magnetic field strengths. Their initial properties are then evolved in time until 
+    the present day. In particular, we model the motion of the neutron stars in the Galaxy, the secular 
+    spin-down evolution due to the emission of electromagnetic radiation and magnetospheric torques and 
+    their radiative emission at different electromagnetic wavelengths: radio, X-rays and gamma rays.</p> 
+
+    <p>Finally, in order to <b>perform a comparison with observed data</b>, we need to account for observational 
+    limitations. This is incorporated by applying filters and selection biases that are able to mimic 
+    the limited sensitivity of real surveys. In this way, <b>mock populations can be constructed and 
+    compared with the real observed populations</b> at different wavelengths. The comparison with 
+    observation is <b>challenging as our parameter space is highly multi-dimensional</b>. However, this 
+    comparison is necessary to constrains theoretical models used in the simulations and distributions 
+    of birth properties of the population. For this purpose, we <b>take advantage of the power of machine 
+    learning</b>, especially convolutional neural networks. These <b>neural networks are able to learn complex 
+    patterns and extract information</b> from the multi-dimensional data provided by our simulations and 
+    have the power of generalising to unseen data samples, such as the true observed neutron star 
+    population. In this way, we aim to provide a framework to interpret the features of entire Galactic 
+    neutron star population in an omni-comprehensive way.</p>
+
+    <p>The population-synthesis framework we are developing will be the first one to <b>incorporate 
+    information coming from the multi-wavelength observations of neutron stars</b>, from radio to X-rays 
+    and gamma rays. This will allow us to better constrain the birth properties of the observed 
+    Galactic population of neutron stars and to shed light on the origin of their different sub-classes 
+    in a unified scenario.</p>
+
+    <div style="text-align: center;">
+        <img src="/assets/images/Machine_learning_paper.png" alt="Machine learning paper" style="width:90%;">
+        <p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px;"><em>A map of the sky as seen from Earth showing the motion of the isolated neutron stars 
+        (see Ronchi et al. 2021 for details).</em></p>
+    </div>
+
+    <h1 id="podium">PODIUM: Navigation Unit Based on X-ray Pulsars</h1>
+    <p>MAGNESIA is also involved in the study of a <b>pulsar-based unit for space navigation</b>, the 
+    PODIUM project, in close collaboration with SENER Aerospace and Deimos Aerospace under 
+    an ESA contract (see also section B.1). This project concerns a spacecraft navigation 
+    unit, designed with <b>the purpose of providing interplanetary missions with autonomous 
+    position and velocity estimations</b>. The unit will make <b>use of pulsar X-ray observations</b> 
+    to measure the distance and changes in the distance of the host spacecraft from the 
+    solar system barycenter. These measurements will then be used by an onboard orbit 
+    determination function to provide the complete orbital information to the spacecraft.</p>
+
+    <p>The concept of X-ray pulsar navigation has been theoretically addressed in the past and 
+    demonstrated in practice by NASA's SEXTANT/NICER mission aboard the International Space 
+    Station. The aim of our action is to <b>define a preliminary design for the unit</b>, tackle 
+    the overall unit architecture, the optical and thermomechanical design, the unit 
+    avionics and software, as well as its function, performance, and operation. PODIUM is 
+    designed to take the mission's operational and accommodation constraints into account 
+    from the beginning.</p>
+  </div>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h3>On this page</h3>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><a href="#multiw">Multi-Wavelength Observations</a></li>
+      <li><a href="#magnetotherm">Magneto-thermal Evolution</a></li>
+      <li><a href="#popsynth">Population Synthesis</a></li>
+      <li><a href="#podium">PODIUM: Navigation Unit Based on X-ray Pulsars</a></li>
+    </ul>
+  </nav>
+</div>
