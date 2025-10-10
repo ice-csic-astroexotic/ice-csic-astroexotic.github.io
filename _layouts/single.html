@@ -62,7 +62,9 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
+      {% unless page.hide_prev_next %}
       {% include post_pagination.html %}
+      {% endunless %}
     </div>
 
     {% if site.comments.provider and page.comments %}
