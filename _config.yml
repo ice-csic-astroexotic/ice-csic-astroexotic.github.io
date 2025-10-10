@@ -160,6 +160,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
   since: "2013"
+  hide_follow: true
 
 
 # Reading Files
