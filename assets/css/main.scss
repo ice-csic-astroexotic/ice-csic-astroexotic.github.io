@@ -62,4 +62,16 @@ search: false
   text-align: center;
   width: 150px;
   box-sizing: border-box;
+  text-decoration: none !important; 
+}
+
+a {
+  text-decoration: none;
+  //color: inherit; // optional: keep the default text color
+}
+
+a:hover,
+a:focus {
+  text-decoration: none; // prevent underline on hover/focus
+  color: inherit;        // optional: keep hover color same
 }
