@@ -13,3 +13,38 @@ search: false
 // .page__content {
 //   font-size: 20px !important;
 //}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.member-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.member-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;      /* crop slightly if images differ in aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.member-card:hover {
+  transform: scale(1.03);
+}
+
+.member-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.member-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}

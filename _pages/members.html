@@ -12,3 +12,33 @@ header:
    alt="Research image"
    class="align-center"
 %}
+
+<h2>Current Members</h2>
+<div class="members-grid">
+  {% assign current_members = site.members | where: "status", "current" %}
+  {% for member in current_members %}
+  <div class="member-card">
+    <a href="{{ member.url | relative_url }}">
+      <img src="{{ member.image | relative_url }}" alt="{{ member.title }}">
+      <h3>{{ member.title }}</h3>
+      <p><em>{{ member.position }}</em></p>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<hr style="margin:3em 0;">
+
+<h2>Former Members</h2>
+<div class="members-grid">
+  {% assign former_members = site.members | where: "status", "former" %}
+  {% for member in former_members %}
+  <div class="member-card">
+    <a href="{{ member.url | relative_url }}">
+      <img src="{{ member.image | relative_url }}" alt="{{ member.title }}">
+      <h3>{{ member.title }}</h3>
+      <p><em>{{ member.position }}</em></p>
+    </a>
+  </div>
+  {% endfor %}
+</div>

@@ -332,3 +332,9 @@ defaults:
       type: pages
     values:
       layout: single
+
+# _members
+collections:
+  members:
+    output: true
+    permalink: /members/:path/
