@@ -20,6 +20,11 @@
         {{ author.bio | markdownify }}
       </div>
     {% endif %}
+    {% if author.location %}
+      <div class="author__location" style="color: #aaa; font-size: 0.9em;">
+        <i class="fas fa-map-marker-alt"></i> {{ author.location }}
+      </div>
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">

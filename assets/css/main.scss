@@ -75,3 +75,8 @@ a:focus {
   text-decoration: none; // prevent underline on hover/focus
   color: inherit;        // optional: keep hover color same
 }
+
+/* Completely hide the Follow dropdown container */
+.author__urls-wrapper {
+  display: none !important;
+}
