@@ -80,3 +80,48 @@ a:focus {
 .author__urls-wrapper {
   display: none !important;
 }
+
+/* Adding this to create members layout */
+.member-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.member-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.member-info h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.member-info p {
+  margin: 0.3rem 0 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Social icons */
+.member-links {
+  margin-top: 0.5rem;
+}
+
+.member-links a {
+  margin-right: 0.6rem;
+  color: #666;
+  font-size: 1.3rem;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.member-links a:hover {
+  color: #1d70b8;
+}
