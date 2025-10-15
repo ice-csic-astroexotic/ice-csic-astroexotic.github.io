@@ -4,12 +4,12 @@ main:
     url: /
   - title: "Research"
     url: /research/
-  - title: "Members"
-    url: /members/
-  - title: "Publications"
-    url: /publications/
   - title: "Code"
     url: /code/
+  - title: "Publications"
+    url: /publications/
+  - title: "Members"
+    url: /members/
   - title: "News"
     url: /news/
   - title: "Outreach"
