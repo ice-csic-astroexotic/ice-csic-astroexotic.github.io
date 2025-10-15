@@ -35,13 +35,13 @@ header:
   {% assign former_members = site.members | where: "status", "former" %}
   {% for member in former_members %}
   <div class="member-card">
-    <a href="{{ member.url | relative_url }}">
+    <!-- <a href="{{ member.url | relative_url }}">  -->
       <img src="{{ member.image | relative_url }}" alt="{{ member.title }}">
     <div class="member-caption">
       <strong>{{ member.title }}</strong><br>
       <span>{{ member.position }}</span>
     </div>
-  </a>
+  <!-- </a> -->
   </div>
   {% endfor %}
 </div>
