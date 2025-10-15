@@ -117,7 +117,7 @@ author:
   name             : "EXOTIC Group"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "High-energy group at ICE-CSIC."
-  location         : "Barcelona, Spain"
+  location         : "Campus UAB,<br>Carrer de Can Magrans s/n,<br>E-08193 Barcelona,<br>Spain"
   email            :
   links: []
     # - label: "Email"

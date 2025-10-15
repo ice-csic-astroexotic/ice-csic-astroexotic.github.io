@@ -8,6 +8,8 @@ main:
     url: /members/
   - title: "Publications"
     url: /publications/
+  - title: "Code"
+    url: /code/
   - title: "News"
     url: /news/
   - title: "Outreach"
