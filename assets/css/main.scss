@@ -139,7 +139,7 @@ a:focus {
 .code-card {
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  width: 250px; /* larger card width */
+  width: 400px; /* larger card width */
   border-radius: 15px;
   overflow: hidden;
   background-color: #333333;
@@ -154,7 +154,7 @@ a:focus {
 /* ===== Image styling ===== */
 .code-card img {
   width: 100%;
-  height: 250px;
+  height: 400px;
   object-fit: cover;
   display: block;
   transition: filter 0.2s ease-in-out;
