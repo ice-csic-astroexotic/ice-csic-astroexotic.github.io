@@ -8,10 +8,10 @@ permalink: /members/francesco_coti_zelati/
 hide_prev_next: true
 
 orcid: "https://orcid.org/0000-0001-7611-1581"
-linkedin: ""
+linkedin:
 ads: "https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7611-1581"
-github: ""
-website: ""
+github:
+website:
 ---
 
 <div class="member-profile">
@@ -21,11 +21,20 @@ website: ""
 
   <div class="member-info">
     <p><i class="fas fa-user"></i> {{ page.position }}</p>
+
     <div class="member-links">
-      <a href="{{ page.orcid }}" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-      <a href="{{ page.ads }}" target="_blank" title="NASA ADS"><i class="fas fa-book"></i></a>
-      <a href="{{ page.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="{{ page.website }}" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+      {% if page.orcid %}
+        <a href="{{ page.orcid }}" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+      {% endif %}
+      {% if page.ads %}
+        <a href="{{ page.ads }}" target="_blank" title="NASA ADS"><i class="fas fa-book"></i></a>
+      {% endif %}
+      {% if page.github %}
+        <a href="{{ page.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if page.website %}
+        <a href="{{ page.website }}" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+      {% endif %}
     </div>
   </div>
 </div>
