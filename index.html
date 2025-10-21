@@ -7,8 +7,36 @@ author_profile: true
 <!-- Centering Container -->
 <div style="max-width: 900px; margin: 0 auto; text-align: justify;">
 
-<!-- 🧭 Slider Button Styling -->
+<!-- 🧭 Slider Styling -->
 <style>
+  /* Slider container (centered + fixed max width) */
+  #slider-container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto 2rem auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Slider track */
+  #slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  /* Images */
+  #slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Slider buttons */
   .slider-btn {
     position: absolute;
     top: 50%;
@@ -26,13 +54,35 @@ author_profile: true
   .slider-btn:hover {
     background: rgba(0, 0, 0, 0.7);
   }
+
+  /* Navigation dots */
+  .slider-dots {
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #333;
+  }
 </style>
 
-<!-- 🖼️ Image Slider with Buttons -->
-<div id="slider-container" style="position: relative; width: 80%; overflow: hidden; margin-bottom: 2rem;">
-  <div id="slider" style="display: flex; transition: transform 0.8s ease-in-out;">
-    <img src="/assets/images/websiteinconstruction.jpg" style="width: 100%; height: auto; flex-shrink: 0;">
-    <img src="/assets/images/websiteinconstruction.jpg" style="width: 100%; height: auto; flex-shrink: 0;">
+<!-- 🖼️ Image Slider -->
+<div id="slider-container">
+  <div id="slider">
+    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 1">
+    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 2">
+    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 3">
   </div>
 
   <!-- ◀ Left Button -->
@@ -42,14 +92,31 @@ author_profile: true
   <button onclick="nextSlide()" class="slider-btn" style="right: 10px;">&#10095;</button>
 </div>
 
-<!-- 🔁 Slider JavaScript -->
+<!-- 🔘 Dots -->
+<div class="slider-dots" id="slider-dots"></div>
+
+<!-- 🔁 JavaScript -->
 <script>
   const slider = document.getElementById("slider");
   const totalSlides = slider.children.length;
   let index = 0;
+  let dotsContainer = document.getElementById("slider-dots");
+
+  // Create navigation dots
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll(".dot");
+  dots[0].classList.add("active");
 
   function updateSlider() {
     slider.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
   }
 
   function nextSlide() {
@@ -62,8 +129,13 @@ author_profile: true
     updateSlider();
   }
 
-  setInterval(nextSlide, 4000);
+  function goToSlide(i) {
+    index = i;
+    updateSlider();
+  }
+
+  // Auto-advance every 6 seconds
+  setInterval(nextSlide, 6000);
 </script>
 
 </div>
-
