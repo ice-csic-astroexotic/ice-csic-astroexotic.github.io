@@ -4,39 +4,73 @@ classes: wide
 author_profile: true
 ---
 
-<!-- Centering Container -->
 <div style="max-width: 900px; margin: 0 auto; text-align: justify;">
 
-<!-- 🧭 Slider Styling -->
 <style>
-  /* Slider container (centered + fixed max width) */
+  /* ===== Slider container ===== */
   #slider-container {
     position: relative;
     max-width: 900px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto 2rem auto;
-    display: block;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   }
 
-  /* Slider track */
+  /* ===== Slides wrapper ===== */
   #slider {
-    display: flex;
-    transition: transform 0.8s ease-in-out;
-  }
-
-  /* Images */
-  #slider img {
+    position: relative;
     width: 100%;
     height: auto;
-    flex-shrink: 0;
+  }
+
+  /* ===== Each slide ===== */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  /* ===== Image styling ===== */
+  .slide img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    border-radius: 10px;
     display: block;
   }
 
-  /* Slider buttons */
+  /* ===== Caption styling ===== */
+  .caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 80%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out 0.6s; /* delay caption for a “cinematic reveal” */
+  }
+
+  .slide.active .caption {
+    opacity: 1;
+  }
+
+  /* ===== Arrows ===== */
   .slider-btn {
     position: absolute;
     top: 50%;
@@ -47,15 +81,21 @@ author_profile: true
     padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 1.5rem;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, opacity 0.5s ease;
     z-index: 10;
+    opacity: 0;
+  }
+
+  /* Show arrows on hover */
+  #slider-container:hover .slider-btn {
+    opacity: 1;
   }
 
   .slider-btn:hover {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  /* Navigation dots */
+  /* ===== Dots ===== */
   .slider-dots {
     text-align: center;
     margin-top: 0.8rem;
@@ -77,32 +117,42 @@ author_profile: true
   }
 </style>
 
-<!-- 🖼️ Image Slider -->
+<!-- ===== Image Slider ===== -->
 <div id="slider-container">
   <div id="slider">
-    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 1">
-    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 2">
-    <img src="/assets/images/websiteinconstruction.jpg" alt="Image 3">
+    <div class="slide active">
+      <img src="/assets/images/websiteinconstruction.jpg" alt="Image 1">
+      <div class="caption">Research Highlight: High-energy systems at ICE-CSIC</div>
+    </div>
+
+    <div class="slide">
+      <img src="/assets/images/websiteinconstruction.jpg" alt="Image 2">
+      <div class="caption">Exploring compact objects</div>
+    </div>
+
+    <div class="slide">
+      <img src="/assets/images/websiteinconstruction.jpg" alt="Image 3">
+      <div class="caption">The EXOTIC Group</div>
+    </div>
   </div>
 
-  <!-- ◀ Left Button -->
+  <!-- ◀ Left -->
   <button onclick="prevSlide()" class="slider-btn" style="left: 10px;">&#10094;</button>
 
-  <!-- ▶ Right Button -->
+  <!-- ▶ Right -->
   <button onclick="nextSlide()" class="slider-btn" style="right: 10px;">&#10095;</button>
 </div>
 
 <!-- 🔘 Dots -->
 <div class="slider-dots" id="slider-dots"></div>
 
-<!-- 🔁 JavaScript -->
 <script>
-  const slider = document.getElementById("slider");
-  const totalSlides = slider.children.length;
+  const slides = document.querySelectorAll("#slider .slide");
+  const totalSlides = slides.length;
   let index = 0;
-  let dotsContainer = document.getElementById("slider-dots");
 
-  // Create navigation dots
+  // Create dots dynamically
+  const dotsContainer = document.getElementById("slider-dots");
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement("span");
     dot.classList.add("dot");
@@ -113,29 +163,59 @@ author_profile: true
   const dots = document.querySelectorAll(".dot");
   dots[0].classList.add("active");
 
-  function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
+  function showSlide(newIndex) {
+    slides[index].classList.remove("active");
+    dots[index].classList.remove("active");
+
+    slides[newIndex].classList.add("active");
+    dots[newIndex].classList.add("active");
+
+    index = newIndex;
   }
 
   function nextSlide() {
-    index = (index + 1) % totalSlides;
-    updateSlider();
+    const next = (index + 1) % totalSlides;
+    showSlide(next);
   }
 
   function prevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateSlider();
+    const prev = (index - 1 + totalSlides) % totalSlides;
+    showSlide(prev);
   }
 
   function goToSlide(i) {
-    index = i;
-    updateSlider();
+    showSlide(i);
   }
 
-  // Auto-advance every 6 seconds
-  setInterval(nextSlide, 6000);
+  // Smooth looping autoplay (no flicker)
+  let slideInterval = setInterval(nextSlide, 6000);
+
+  // Pause autoplay on hover
+  const sliderContainer = document.getElementById("slider-container");
+  sliderContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
+  sliderContainer.addEventListener("mouseleave", () => {
+    slideInterval = setInterval(nextSlide, 6000);
+  });
+
+  // ===== Auto-hide arrows =====
+  const buttons = sliderContainer.querySelectorAll(".slider-btn");
+  let hideTimeout;
+
+  function hideArrows() {
+    buttons.forEach(btn => btn.style.opacity = "0");
+  }
+
+  function showArrows() {
+    buttons.forEach(btn => btn.style.opacity = "1");
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(hideArrows, 2500);
+  }
+
+  sliderContainer.addEventListener("mouseenter", showArrows);
+  sliderContainer.addEventListener("mousemove", showArrows);
+  sliderContainer.addEventListener("mouseleave", hideArrows);
+
+  hideTimeout = setTimeout(hideArrows, 2000);
 </script>
 
 </div>
