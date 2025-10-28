@@ -3,7 +3,7 @@ title: "Population Synthesis of Galactic Neutron Stars"
 permalink: /research/popsynth/
 layout: splash
 header:
-  overlay_image: /assets/images/pictures/Machine_learning_paper.png
+  overlay_image: /assets/images/pictures/x_y_kick.gif
   overlay_filter: 0.3
 <!-- classes: wide -->
 ---
@@ -50,8 +50,8 @@ header:
   observation is <b>challenging as our parameter space is highly multi-dimensional</b>. However, this
   comparison is necessary to constrains theoretical models used in the simulations and distributions
   of birth properties of the population. For this purpose, we <b>take advantage of the power of machine
-  learning</b>, especially an approach called <b>Simulation-Based Inference (SBI)</b> (see e.g.
-  [Cranmer et al. 2020](https://ui.adsabs.harvard.edu/abs/2020PNAS..11730055C/abstract)).
+  learning</b>, especially an approach called <b>Simulation-Based Inference (SBI)</b>
+    (see e.g., <a href="https://ui.adsabs.harvard.edu/abs/2020PNAS..11730055C/abstract" target="_blank">Cranmer et al. 2020</a>).
   For complex and computationally expensive simulations, the likelihood function cannot be computed explicitly,
   and SBI overcomes this limitation by training neural networks (neural density estimators) on simulated data to
   <b>learn a mapping between model parameters and simulated observables</b> and reconstruct an approximation of the
@@ -69,8 +69,11 @@ header:
 </div>
 
 
-<div style="text-align: center;">
-  <img src="/assets/images/pictures/Machine_learning_paper.png" alt="Machine learning paper" style="width:90%;">
-  <p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px; margin-top: 15px;">A map of the sky as seen from Earth showing the motion of the isolated neutron stars
-  (see Ronchi et al. 2021 for details).</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; text-align: center;">
+  <img src="/assets/images/pictures/dyn_evolution_xz.gif" alt="Dynamical evolution" style="width:45%; border-radius: 10px;">
+  <img src="/assets/images/pictures/magrot_evol_Bdecay_fit.gif" alt="Magneto-rotational evolution" style="width:45%; border-radius: 10px;">
 </div>
+
+<p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px; margin-top: 15px;">
+  Dynamical (left) and magneto-rotational (right) evolution of neutron stars.
+</p>
