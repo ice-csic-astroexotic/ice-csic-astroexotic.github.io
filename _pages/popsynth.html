@@ -1,65 +1,79 @@
 ---
 title: "Population Synthesis of Galactic Neutron Stars"
 permalink: /research/popsynth/
-layout: splash 
+layout: splash
 header:
-  overlay_image: /assets/images/pictures/Machine_learning_paper.png
+  overlay_image: /assets/images/pictures/x_y_kick.gif
   overlay_filter: 0.3
 <!-- classes: wide -->
 ---
 
 <div class="main-content" style="text-align: justify;">
-  <p>The <b>neutron star population is dominated by radio pulsars</b>. However in the last decades, <b>several 
-  extreme and puzzling subclasses of neutron stars</b> have been discovered: Anomalous X-ray Pulsars 
-  (AXPs), Soft Gamma Repeaters (SGRs), Rotating Radio Transients (RRAT), X-ray Dim Isolated Neutron 
-  stars (XINSs), Central Compact Objects (CCOs) as well as the more common X-ray binary neutron stars 
-  accreting material from a low-mass or high-mass companion star. In particular, despite being 
-  governed by a single equation of state, the <b>neutron star zoo manifests itself as a multifaceted 
+  <p>The <b>neutron star population is dominated by radio pulsars</b>. However in the last decades, <b>several
+  extreme and puzzling subclasses of neutron stars</b> have been discovered: Anomalous X-ray Pulsars
+  (AXPs), Soft Gamma Repeaters (SGRs), Rotating Radio Transients (RRAT), X-ray Dim Isolated Neutron
+  stars (XINSs), Central Compact Objects (CCOs) as well as the more common X-ray binary neutron stars
+  accreting material from a low-mass or high-mass companion star. In particular, despite being
+  governed by a single equation of state, the <b>neutron star zoo manifests itself as a multifaceted
   population</b>: some neutron stars are observed to emit only in radio, others seem to emit only high-
-  energy radiation in the form of X-rays and gamma rays. Some show continuous activity, while others 
-  are capable of emitting sudden powerful transients. This <b>puzzling variety of observational 
-  properties is still largely unexplained</b>. Additionally, we know that neutron stars are the compact 
-  remnants of massive stars that end their lives in Core Collapse Supernovae. To accommodate limits 
-  of the death rate of such massive stars in our Galaxy (around 1-3 per century), <b>different neutron 
-  star classes are likely related and can be linked through evolution</b>. Despite observations being 
-  plentiful, we are far from understanding connections between these different classes and a unified 
+  energy radiation in the form of X-rays and gamma rays. Some show continuous activity, while others
+  are capable of emitting sudden powerful transients. This <b>puzzling variety of observational
+  properties is still largely unexplained</b>. Additionally, we know that neutron stars are the compact
+  remnants of massive stars that end their lives in Core Collapse Supernovae. To accommodate limits
+  of the death rate of such massive stars in our Galaxy (around 1-3 per century), <b>different neutron
+  star classes are likely related and can be linked through evolution</b>. Despite observations being
+  plentiful, we are far from understanding connections between these different classes and a unified
   scenario.</p>
 
-  <p>Therefore, <b>one of the main objectives of population synthesis studies is to reconstruct, from a 
-  statistical point of view, the unknown distributions of physical properties</b> that characterise the 
-  initial population. The general approach is to use the present-day observed properties of pulsars, 
-  together with some assumptions and theoretical models about their time evolution, to reconstruct 
-  the birth distribution of physical properties such as their natal kick velocities, spin periods and 
-  magnetic field strengths. In our population-synthesis framework <b>different neutron star populations 
-  can be simulated starting from various initial conditions</b> in terms of birth positions, velocities, 
-  spin periods and magnetic field strengths. Their initial properties are then evolved in time until 
-  the present day. In particular, we model the motion of the neutron stars in the Galaxy, the secular 
-  spin-down evolution due to the emission of electromagnetic radiation and magnetospheric torques and 
-  their radiative emission at different electromagnetic wavelengths: radio, X-rays and gamma rays.</p> 
+  <p>Therefore, <b>one of the main objectives of population synthesis studies is to reconstruct, from a
+  statistical point of view, the unknown distributions of physical properties</b> that characterise the
+  initial population. The general approach is to use the present-day observed properties of neutron stars,
+  together with some assumptions and theoretical models about their time evolution, to reconstruct
+  the birth distribution of physical properties such as their natal kick velocities, spin periods and
+  magnetic field strengths (see e.g., <a href="https://ui.adsabs.harvard.edu/abs/2006ApJ...643..332F/abstract" target="_blank">Faucher-Gigu&egrave;re and Kaspi, 2006</a>,
+  <a href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.454..615G/abstract" target="_blank">Gull&oacute;n et al., 2015</a>,
+  <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.4043C/abstract" target="_blank">Ci&eacute;slar et al., 2020</a>).
+  We are developing ML-Poppyns (<a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...916..100R/abstract" target="_blank">Ronchi et al., 2021</a>,
+  <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...968...16G/abstract" target="_blank">Graber et al., 2024</a>,
+  <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...696A.114P/abstract" target="_blank">Pardo Araujo et al. 2025</a>),
+  a population-synthesis framework where <b>different neutron star populations can be simulated starting from
+  various initial conditions</b> in terms of birth positions, velocities, spin periods and magnetic field strengths.
+  Their initial properties are then evolved in time until the present day. In particular, we model the motion of
+  the neutron stars in the Galaxy, the magnetic field decay, the secular spin-down evolution due to the emission
+  of electromagnetic radiation and magnetospheric torques and their radiative emission at different electromagnetic
+  wavelengths: radio, X-rays and gamma rays.</p>
 
-  <p>Finally, in order to <b>perform a comparison with observed data</b>, we need to account for observational 
-  limitations. This is incorporated by applying filters and selection biases that are able to mimic 
-  the limited sensitivity of real surveys. In this way, <b>mock populations can be constructed and 
-  compared with the real observed populations</b> at different wavelengths. The comparison with 
-  observation is <b>challenging as our parameter space is highly multi-dimensional</b>. However, this 
-  comparison is necessary to constrains theoretical models used in the simulations and distributions 
-  of birth properties of the population. For this purpose, we <b>take advantage of the power of machine 
-  learning</b>, especially convolutional neural networks. These <b>neural networks are able to learn complex 
-  patterns and extract information</b> from the multi-dimensional data provided by our simulations and 
-  have the power of generalising to unseen data samples, such as the true observed neutron star 
-  population. In this way, we aim to provide a framework to interpret the features of entire Galactic 
+  <p>Finally, in order to <b>perform a comparison with observed data</b>, we need to account for observational
+  limitations. This is incorporated by applying filters and selection biases that are able to mimic
+  the limited sensitivity of real surveys. In this way, <b>mock populations can be constructed and
+  compared with the real observed populations</b> at different wavelengths. The comparison with
+  observation is <b>challenging as our parameter space is highly multi-dimensional</b>. However, this
+  comparison is necessary to constrains theoretical models used in the simulations and distributions
+  of birth properties of the population. For this purpose, we <b>take advantage of the power of machine
+  learning</b>, especially an approach called <b>Simulation-Based Inference (SBI)</b>
+    (see e.g., <a href="https://ui.adsabs.harvard.edu/abs/2020PNAS..11730055C/abstract" target="_blank">Cranmer et al. 2020</a>).
+  For complex and computationally expensive simulations, the likelihood function cannot be computed explicitly,
+  and SBI overcomes this limitation by training neural networks (neural density estimators) on simulated data to
+  <b>learn a mapping between model parameters and simulated observables</b> and reconstruct an approximation of the
+  posterior distribution of the model parameters. To process and compress the information contained in the simulated
+  data we adopt convolutional neural networks. These <b>neural networks are able to learn complex
+  patterns and extract information</b> from the multi-dimensional data provided by our simulations and
+  have the power of generalising to unseen data samples, such as the true observed neutron star
+  population. In this way, we aim to provide a framework to interpret the features of entire Galactic
   neutron star population in an omni-comprehensive way.</p>
 
-  <p>The population-synthesis framework we are developing will be the first one to <b>incorporate 
-  information coming from the multi-wavelength observations of neutron stars</b>, from radio to X-rays 
-  and gamma rays. This will allow us to better constrain the birth properties of the observed 
-  Galactic population of neutron stars and to shed light on the origin of their different sub-classes 
-  in a unified scenario.</p>
+  ML-Poppyns will be the first population-synthesis framework to <b>incorporate information coming from the
+  multi-wavelength observations of neutron stars</b>, from radio to X-rays and gamma rays.
+  This will allow us to better constrain the birth properties of the observed Galactic population of neutron stars
+  and to shed light on the origin of their different sub-classes in a unified scenario.</p>
 </div>
 
-  
-<div style="text-align: center;">
-  <img src="/assets/images/pictures/Machine_learning_paper.png" alt="Machine learning paper" style="width:90%;">
-  <p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px; margin-top: 15px;">A map of the sky as seen from Earth showing the motion of the isolated neutron stars 
-  (see Ronchi et al. 2021 for details).</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; text-align: center;">
+  <img src="/assets/images/pictures/dyn_evolution_xz.gif" alt="Dynamical evolution" style="width:45%; border-radius: 10px;">
+  <img src="/assets/images/pictures/magrot_evol_Bdecay_fit.gif" alt="Magneto-rotational evolution" style="width:45%; border-radius: 10px;">
 </div>
+
+<p style="background-color: #333333; padding: 5px 10px; display: inline-block; border-radius: 5px; margin-top: 15px;">
+  Dynamical (left) and magneto-rotational (right) evolution of neutron stars.
+</p>
