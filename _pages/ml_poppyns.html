@@ -16,7 +16,13 @@ header:
 
 <div class="main-content" style="text-align: justify;">
   <p> ML-Poppyns is a new population synthesis framework for Galactic neutron stars that employs deep learning and
-    simulation based inference to investigate the birth, evolution and emission properties of the neutron star population in our Galaxy. </p>
+  simulation based inference (SBI) to investigate the birth, evolution and emission properties of the neutron star population in our Galaxy.
+  It starts from some initial conditions on the birth positions in the Galaxy, kick velocities, birth spin-periods and magnetic field distributions.
+  It then performs dynamical and magneto-rotational evolution to generate an evolved population of neutron star.
+  Finally it models the radio emission and detection with radio surveys.
+  To perform parameter inference it employs the power of neural networks, in particular a neural density estimator is trained on simulated data
+  to learn a mapping between model parameters and simulated observables and reconstruct an approximation of the posterior distribution of the model parameters.
+  Once trained the neural density estimator can be applied to the true observed neutron star population to infer its physical properties.</p>
 </div>
 
 <div class="main-content" style="text-align: justify;">
@@ -28,17 +34,42 @@ header:
    </div>
     <hr>
     <h1>Documentation</h1>
-    A guide for the installation can be found in the README file together with the instructions to compile the full
+    A guide for the installation can be found in the <a href="https://github.com/ice-csic-astroexotic/ML-Poppyns-Open/blob/main/README.md" target="_blank">README </a> file together with the instructions to compile the full
     documentation including a quick-start guide. <br>
     <hr>
     <h1>Contact</h1>
     Should you encounter any issues or have questions, please feel free to email us at <a href="mailto:ml-poppyns@ice.csic.es?subject=Issue%20with%ML-Poppyns" style="color: #c4151c;">ml-poppyns@ice.csis.es</a>.
 
     <hr>
-    If you use ML-Poppyns in your research, please reference the repository <a href="https://github.com/ice-csic-astroexotic/ML-Poppyns-Open" target="_blank">website </a> and the following publications:
-    <ul>
-      <li> Analyzing the Galactic Pulsar Distribution with Machine Learning, <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...916..100R/abstract" target="_blank">Ronchi et al. 2021 </a>
-      <li> Isolated Pulsar Population Synthesis with Simulation-based Inference, <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...968...16G/abstract" target="_blank">Graber et al. 2024 </a>
-      <li> Radio pulsar population synthesis with consistent flux measurements using simulation-based inference, <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...696A.114P/abstract" target="_blank">Pardo-Araujo et al. 2025 </a>
-    <ul>
+  <p>If you use <b>ML-Poppyns</b> in your research, we kindly ask you to:</p>
+
+    <ol>
+      <li>
+        Cite the following publications in the text:
+        <br><br>
+        <ul>
+          <li>
+            Analyzing the Galactic Pulsar Distribution with Machine Learning,
+            <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...916..100R/abstract" target="_blank">Ronchi et al. 2021</a>
+          </li>
+          <li>
+            Isolated Pulsar Population Synthesis with Simulation-based Inference,
+            <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...968...16G/abstract" target="_blank">Graber et al. 2024</a>
+          </li>
+          <li>
+            Radio pulsar population synthesis with consistent flux measurements using simulation-based inference,
+            <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...696A.114P/abstract" target="_blank">Pardo-Araujo et al. 2025</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Add the following sentence in the acknowledgment section of your publication:
+        <br><br>
+        <i>
+          "ML-Poppyns has been funded by the European Research Council via the ERC Consolidator grant
+          'MAGNESIA' (No. 817661; PI: N. Rea)."
+        </i>
+      </li>
+    </ol>
 </div>
