@@ -12,7 +12,6 @@ author_profile: true
     position: relative;
     max-width: 900px;
     width: 100%;
-    aspect-ratio: 16 / 9; /* 👈 keeps uniform dimensions for all slides */
     overflow: hidden;
     margin: 0 auto 2rem auto;
     border-radius: 10px;
@@ -23,7 +22,6 @@ author_profile: true
   #slider {
     position: relative;
     width: 100%;
-    height: 100%;
     display: grid;
   }
 
@@ -31,7 +29,9 @@ author_profile: true
   .slide {
     grid-area: 1 / 1;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9; /* keep same height for all */
+    overflow: hidden;
+    position: relative;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     z-index: 1;
@@ -45,21 +45,21 @@ author_profile: true
   /* ===== Clickable link inside slide ===== */
   .slide-link {
     display: block;
-    position: relative;
     width: 100%;
     height: 100%;
+    position: relative;
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
   }
 
   .slide-link img {
     width: 100%;
-    height: 100%; /* 👈 fills entire slide area */
-    object-fit: cover; /* 👈 crops nicely without stretching */
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     display: block;
-    transition: filter 0.3s ease;
+    position: relative;
+    z-index: 1;
   }
 
   .slide-link:hover img {
@@ -81,7 +81,8 @@ author_profile: true
     text-align: center;
     max-width: 80%;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out 0.6s;
+    transition: opacity 1.5s ease-in-out 0.6s, transform 0.5s ease-out;
+    z-index: 3; /* keep caption on top */
   }
 
   .slide.active .caption {
@@ -141,7 +142,7 @@ author_profile: true
     <!-- === Slide 1 === -->
     <div class="slide active">
       <a href="/research/" target="_blank" class="slide-link">
-        <img src="/assets/images/websiteinconstruction.jpg" alt="Our Research">
+        <img src="/assets/images/banners/andromeda_galaxy.jpg" alt="Our Research">
         <div class="caption">Compact Objects at ICE-CSIC</div>
       </a>
     </div>
@@ -149,7 +150,7 @@ author_profile: true
     <!-- === Slide 2 === -->
     <div class="slide">
       <a href="/code/" target="_blank" class="slide-link">
-        <img src="/assets/images/websiteinconstruction.jpg" alt="Published Code">
+        <img src="/assets/images/banners/code.jpg" alt="Published Code">
         <div class="caption">Our GitHub repositories</div>
       </a>
     </div>
@@ -157,7 +158,7 @@ author_profile: true
     <!-- === Slide 3 === -->
     <div class="slide">
       <a href="/members/" target="_blank" class="slide-link">
-        <img src="/assets/images/websiteinconstruction.jpg" alt="Group Members">
+        <img src="/assets/images/banners/HMXB.jpg" alt="Group Members">
         <div class="caption">The EXOTIC Group</div>
       </a>
     </div>
