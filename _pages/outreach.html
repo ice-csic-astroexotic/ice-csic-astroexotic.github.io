@@ -1,7 +1,7 @@
 ---
 title: "Outreach"
 permalink: /outreach/
-layout: splash
+layout: archive
 header:
   overlay_image: /assets/images/banners/crab.jpg
   overlay_filter: 0.3
@@ -12,6 +12,11 @@ header:
     In the meantime, have a look at our <a href="https://aliga.ice.csic.es/erc-magnesia/category/outreach/">
     old website Outreach page</a>!</p>
 </div>
+
+{% assign new_posts = site.posts | where: "categories", "outreach" %}
+{% for post in new_posts %}
+  {% include archive-single.html %}
+{% endfor %}
 
 <!-- {% include figure
    image_path="/assets/images/websiteinconstruction.jpg"

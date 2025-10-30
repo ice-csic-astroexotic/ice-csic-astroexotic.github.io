@@ -2,9 +2,6 @@
 layout: archive
 title: "News"
 permalink: /news/
-archive_type: category
-collection: posts
-category: news
 header:
   overlay_image: /assets/images/banners/neutronstar.jpg
   overlay_filter: 0.3
@@ -15,8 +12,8 @@ header:
     at our <a href="https://aliga.ice.csic.es/erc-magnesia/category/news/">old website News page</a>!</p>
 </div>
 
-{% assign news_posts = site.posts | where: "categories", "news" %}
-{% for post in news_posts %}
+{% assign new_posts = site.posts | where: "categories", "news" %}
+{% for post in new_posts %}
   {% include archive-single.html %}
 {% endfor %}
 
