@@ -11,9 +11,14 @@ header:
 ---
 
 <div class="main-content" style="text-align: justify;">
-  <p> News from the group will be published here as soon as available. In the meantime, have a look
+  <p> News from the group will be published here as soon as available. For older updates, have a look
     at our <a href="https://aliga.ice.csic.es/erc-magnesia/category/news/">old website News page</a>!</p>
 </div>
+
+{% assign news_posts = site.posts | where: "categories", "news" %}
+{% for post in news_posts %}
+  {% include archive-single.html %}
+{% endfor %}
 
 <!-- {% include figure
    image_path="/assets/images/websiteinconstruction.jpg"
