@@ -21,7 +21,7 @@ title                    : ""
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "EXOTIC"
-description              : "High-energy group at ICE-CSIC."
+description              : "Extreme compact objects in the transient multi-messenger sky"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -114,18 +114,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "EXOTIC Group"
+  name             : "EXTREME COMPACT OBJECTS IN THE TRANSIENT MULTI-MESSENGER SKY"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "High-energy group at ICE-CSIC."
-  location         : "Campus UAB,<br>Carrer de Can Magrans s/n,<br>E-08193 Barcelona,<br>Spain"
+  bio              : " "
+  location         : "Institute of Space Sciences (ICE-CSIC)<br>Campus UAB,<br>Carrer de Can Magrans s/n,<br>E-08193 Barcelona,<br>Spain"
   email            :
   links: []
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   # url: "mailto:your.name@email.com"
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   # url: "https://your-website.com"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://www.ice.csic.es"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   # url: "https://twitter.com/"
