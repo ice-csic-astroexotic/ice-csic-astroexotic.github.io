@@ -116,13 +116,13 @@ analytics:
 author:
   name             : "EXTREME COMPACT OBJECTS IN THE TRANSIENT MULTI-MESSENGER SKY"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : " "
+  bio              : "Visit the [ICE-CSIC Website](https://www.ice.csic.es)"
   location         : "Institute of Space Sciences (ICE-CSIC)<br>Campus UAB,<br>Carrer de Can Magrans s/n,<br>E-08193 Barcelona,<br>Spain"
-  email            : ""
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.ice.csic.es"
+  email            : " "
+  links: []
+    #- label: "ICE-CSIC website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://www.ice.csic.es"
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   # url: "mailto:your.name@email.com"
