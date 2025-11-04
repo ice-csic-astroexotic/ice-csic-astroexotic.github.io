@@ -118,8 +118,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : " "
   location         : "Institute of Space Sciences (ICE-CSIC)<br>Campus UAB,<br>Carrer de Can Magrans s/n,<br>E-08193 Barcelona,<br>Spain"
-  email            :
-  links: []
+  email            : ""
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.ice.csic.es"
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   # url: "mailto:your.name@email.com"
@@ -160,7 +163,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-  since: "2013"
+  #since: "2025"
   hide_follow: true
 
 
