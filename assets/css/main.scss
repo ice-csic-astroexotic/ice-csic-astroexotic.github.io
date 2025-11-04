@@ -201,3 +201,22 @@ a:focus {
   }
 }
 
+/* 1. Target the link inside the bio for initial styling */
+.custom-bio-link-styling a {
+  /* Font size and weight (from previous step) */
+  font-size: 1.15em; 
+  font-weight: bold;
+  text-decoration: none; /* Recommended: Remove default underline */
+  transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
+
+  /* Set the desired vibrant pink color for the link */
+  color: #FF3366 !important; /* <--- REPLACE #FF3366 with your EXACT HEX CODE */
+}
+
+/* 2. Add the Hover Effect */
+.custom-bio-link-styling a:hover,
+.custom-bio-link-styling a:focus {
+  /* On hover, change to a brighter or complementary color */
+  color: #FFFFFF !important; /* Example: Changes to White/Neon Yellow on hover */
+  text-decoration: underline; /* Optional: Add underline back on hover for clarity */
+}
