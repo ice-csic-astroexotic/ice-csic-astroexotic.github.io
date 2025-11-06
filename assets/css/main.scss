@@ -219,3 +219,15 @@ a:focus {
   /* On hover, change to a brighter or complementary color */
   color: #FFFFFF !important; /* Example: Changes to White/Neon Yellow on hover */
 }
+
+/* Change text-selection highlight color */
+::selection {
+  background: #FF3366 !important;  /* Pick any visible color */
+  color: #ffffff !important;        /* Text color when selected */
+}
+
+/* Firefox requires a different selector */
+::-moz-selection {
+  background: #FF3366 !important;
+  color: #ffffff !important;
+}
