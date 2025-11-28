@@ -86,7 +86,43 @@ header:
 </div>
 
 
-<h1>Code Gallery</h1> -->
+<style>
+  .custom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller min width */
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .custom-card {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f7f7f7;
+    text-align: center;
+    transition: transform 0.2s ease;
+    padding: 5px; /* smaller padding */
+  }
+
+  .custom-card:hover {
+    transform: scale(1.03);
+  }
+
+  .custom-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    background: #fff;
+    padding: 2px; /* smaller padding */
+    border-radius: 3px;
+  }
+
+  .custom-caption {
+    padding-top: 3px; /* smaller spacing */
+    font-size: 1em;   /* slightly smaller font */
+  }
+</style>
+  
+<h1>Catalogue</h1> -->
 <div class="custom-grid">
   <div class="custom-card">
     <a href="/code/matins/catalogue">
