@@ -10,10 +10,10 @@ main:
     url: /publications/
   - title: "Members"
     url: /members/
-  - title: "News"
-    url: /news/
-  - title: "Outreach"
-    url: /outreach/
+  #- title: "News"
+  #  url: /news/
+  #- title: "Outreach"
+  #  url: /outreach/
   - title: "Join Us"
     url: /join-us/
   #- title: "Quick-Start Guide"
